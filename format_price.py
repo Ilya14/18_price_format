@@ -1,3 +1,7 @@
+import argparse
+import logging
+
+
 def format_price(price):
     float_price = float(price)
     sign = '-' if float_price < 0 else ''
@@ -23,9 +27,6 @@ def format_price(price):
     return formatted_price
 
 if __name__ == '__main__':
-    import argparse
-    import logging
-
     def get_input_data():
         parser = argparse.ArgumentParser(description='Script for price formatting')
         parser.add_argument('price', help='Price string')
